@@ -62,46 +62,60 @@ window.ECOAA_CONTENT = {
     {
       "name": "André Megali Amado",
       "role": "Coordenação científica",
-      "detail": "Professor titular da UFJF, com atuação acadêmica na UNIFESP. Limnologia, ecologia aquática, biogeoquímica e pesquisa aplicada.\nLattes:  http://lattes.cnpq.br/4312158184208542\nORCID: 0000-0002-7736-8802",
-      "photo": "assets/Andre-Amado.jpeg",
+      "detail": "Professor titular da UFJF, com atuação acadêmica na UNIFESP. Limnologia, ecologia aquática, biogeoquímica e pesquisa aplicada.\n",
+      "photo": "/assets/Andre-Amado.jpeg",
       "lattes": "http://lattes.cnpq.br/4312158184208542",
-      "orcid": "https://orcid.org/0000-0002-7736-8802",
-      "googleScholar": ""
+      "orcid": "0000-0002-7736-8802",
+      "googleScholar": "https://scholar.google.com/citations?user=YAmm-pwAAAAJ&hl=pt-BR"
     },
     {
       "name": "Otávio Augusto Lacerda Ferreira Pimentel",
       "role": "Colaborador científico atual",
-      "detail": "Pesquisas em aquicultura, qualidade da água e ecologia aquática. Participou de desenvolvimento tecnológico histórico na UFRN."
+      "detail": "Pesquisas em aquicultura, qualidade da água e ecologia aquática. Participou de desenvolvimento tecnológico histórico na UFRN.",
+      "lattes": "",
+      "orcid": ""
     },
     {
       "name": "Ng Haig They",
       "role": "Colaborador científico atual",
-      "detail": "Pesquisador com trajetória de colaboração no Laboratório de Limnologia da UFRN e participação em desenvolvimento tecnológico histórico."
+      "detail": "Pesquisador com trajetória de colaboração no Laboratório de Limnologia da UFRN e participação em desenvolvimento tecnológico histórico.",
+      "lattes": "",
+      "orcid": ""
     },
     {
       "name": "Hugo Sarmento",
       "role": "Colaborador científico atual",
-      "detail": "Ecologia microbiana aquática e processos ecossistêmicos. Atuação histórica em pós-doutorado no Laboratório de Limnologia da UFRN."
+      "detail": "Ecologia microbiana aquática e processos ecossistêmicos. Atuação histórica em pós-doutorado no Laboratório de Limnologia da UFRN.",
+      "lattes": "",
+      "orcid": ""
     },
     {
       "name": "Diego Raymundo Nascimento",
       "role": "Colaborador científico atual",
-      "detail": "Pesquisa sobre arborização urbana e estoques de carbono. Atuou na coordenação de campo e monitoramento do BEF-Atlantic."
+      "detail": "Pesquisa sobre arborização urbana e estoques de carbono. Atuou na coordenação de campo e monitoramento do BEF-Atlantic.",
+      "lattes": "",
+      "orcid": ""
     },
     {
       "name": "Hanna Turetti Cardinot",
       "role": "Doutoranda · UFJF",
-      "detail": "Qualidade da água do rio Paraibuna, matéria orgânica dissolvida e contaminantes. Orientação: André Megali Amado; coorientação: Tauany Rodrigues (UERJ)."
+      "detail": "Qualidade da água do rio Paraibuna, matéria orgânica dissolvida e contaminantes. Orientação: André Megali Amado; coorientação: Tauany Rodrigues (UERJ).",
+      "lattes": "",
+      "orcid": ""
     },
     {
       "name": "Artur Ramos Molina",
       "role": "Doutorando · UFJF",
-      "detail": "Regeneração natural no BEF-Atlantic. Orientação: André Megali Amado; coorientação: Fabrício Carvalho (UFJF)."
+      "detail": "Regeneração natural no BEF-Atlantic. Orientação: André Megali Amado; coorientação: Fabrício Carvalho (UFJF).",
+      "lattes": "",
+      "orcid": ""
     },
     {
       "name": "Ana Laura Martins Mendes",
       "role": "Iniciação científica",
-      "detail": "Potencial de estocagem de carbono pela arborização urbana de São José dos Campos. Orientação: André Megali Amado."
+      "detail": "Potencial de estocagem de carbono pela arborização urbana de São José dos Campos. Orientação: André Megali Amado.",
+      "lattes": "",
+      "orcid": ""
     }
   ],
   "historicalPeople": [
