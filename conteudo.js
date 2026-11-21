@@ -63,7 +63,7 @@ window.ECOAA_CONTENT = {
       "name": "André Megali Amado",
       "role": "Coordenação científica",
       "detail": "Professor titular da UFJF, com atuação acadêmica na UNIFESP. Limnologia, ecologia aquática, biogeoquímica e pesquisa aplicada.\n",
-      "photo": "/assets/Andre-Amado.jpeg",
+      "photo": "assets/Andre-Amado.jpeg",
       "lattes": "http://lattes.cnpq.br/4312158184208542",
       "orcid": "0000-0002-7736-8802",
       "googleScholar": "https://scholar.google.com/citations?user=YAmm-pwAAAAJ&hl=pt-BR"
