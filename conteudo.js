@@ -63,7 +63,10 @@ window.ECOAA_CONTENT = {
       "name": "André Megali Amado",
       "role": "Coordenação científica",
       "detail": "Professor titular da UFJF, com atuação acadêmica na UNIFESP. Limnologia, ecologia aquática, biogeoquímica e pesquisa aplicada.\nLattes:  http://lattes.cnpq.br/4312158184208542\nORCID: 0000-0002-7736-8802",
-      "photo": "assets/Andre-Amado.jpeg"
+      "photo": "assets/Andre-Amado.jpeg",
+      "lattes": "http://lattes.cnpq.br/4312158184208542",
+      "orcid": "https://orcid.org/0000-0002-7736-8802",
+      "googleScholar": ""
     },
     {
       "name": "Otávio Augusto Lacerda Ferreira Pimentel",
