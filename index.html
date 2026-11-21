@@ -159,7 +159,20 @@ function projectCard(p){return `<article class="card project" data-title="${esca
 document.querySelector('#home-projects').innerHTML=projects.slice(0,3).map(projectCard).join('');document.querySelector('#project-current').innerHTML=projects.filter(p=>p.group==='current').map(projectCard).join('');document.querySelector('#project-history').innerHTML=projects.filter(p=>p.group==='history').map(projectCard).join('');
 function personCard(p){return `<article class="card person"><div class="visual-placeholder person-photo" aria-label="Espaço reservado para fotografia de ${escapeHtml(p.name)}">Foto de ${escapeHtml(p.name)} — a inserir</div><div class="role">${escapeHtml(p.role)}</div><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.detail)}</p></article>`}
 function formatPersonDetail(detail){return escapeHtml(detail).replace(/Lattes:\s*(https?:\/\/lattes\.cnpq\.br\/\d+)/gi,(_,url)=>'Lattes: <a href="'+url+'" target="_blank" rel="noopener noreferrer">Currículo Lattes</a>')}
-function compactPerson(p){return `<article class="team-person"><div class="team-avatar" aria-label="Fotografia de ${escapeHtml(p.name)}">${p.photo?`<img src="${escapeHtml(p.photo)}" alt="Retrato de ${escapeHtml(p.name)}" loading="lazy">`:`<span>Foto</span>`}</div><div><h4>${escapeHtml(p.name)}</h4><p class="team-person-role">${escapeHtml(p.role)}</p><p>${formatPersonDetail(p.detail)}</p></div></article>`}
+function personAcademicLinks(p){
+ const d=String(p.detail||'');
+ const oldLattes=(d.match(/Lattes:\s*(https?:\/\/lattes\.cnpq\.br\/\d+)/i)||[])[1]||'';
+ const oldOrcid=(d.match(/ORCID:\s*(?:https?:\/\/orcid\.org\/)?([\dX-]{19})/i)||[])[1]||'';
+ return [['Currículo Lattes',p.lattes||oldLattes],['ORCID',p.orcid||oldOrcid],['Google Acadêmico',p.googleScholar||'']].map(([label,raw])=>{
+  let url=String(raw||'').trim();
+  if(label==='ORCID'&&/^[\dX-]{19}$/i.test(url))url='https://orcid.org/'+url;
+  if(!/^https?:\/\//i.test(url))return '';
+  try{let u=new URL(url);if(!['http:','https:'].includes(u.protocol))return ''}catch{return ''}
+  return '<a href="'+escapeHtml(url)+'" target="_blank" rel="noopener noreferrer">'+label+'</a>';
+ }).filter(Boolean).join(' · ');
+}
+function cleanPersonDetail(detail){return escapeHtml(String(detail||'').replace(/(?:^|\n)\s*(?:Lattes:\s*https?:\/\/lattes\.cnpq\.br\/\d+|ORCID:\s*(?:https?:\/\/orcid\.org\/)?[\dX-]{19})\s*/gi,'\n')).trim().replace(/\n/g,'<br>')}
+function compactPerson(p){return `<article class="team-person"><div class="team-avatar" aria-label="Fotografia de ${escapeHtml(p.name)}">${p.photo?`<img src="${escapeHtml(p.photo)}" alt="Retrato de ${escapeHtml(p.name)}" loading="lazy">`:`<span>Foto</span>`}</div><div><h4>${escapeHtml(p.name)}</h4><p class="team-person-role">${escapeHtml(p.role)}</p><p>${cleanPersonDetail(p.detail)}</p>${personAcademicLinks(p)?`<p class="academic-links">${personAcademicLinks(p)}</p>`:""}</div></article>`}
 const coordinator=people.filter(p=>p.name==='André Megali Amado');
 const students=people.filter(p=>/Doutorand|Mestrand|Iniciação científica/i.test(p.role));
 const collaborators=people.filter(p=>!coordinator.includes(p)&&!students.includes(p));
